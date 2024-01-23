@@ -1,0 +1,78 @@
+.landing {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #999d9e;
+  .headImage {
+    object-fit: cover;
+    object-position: center 10%;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    border-radius: 100%;
+    border: 1px solid white;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media only screen and (max-width: 1023px) {
+      width: unset;
+      height: unset;
+      position: unset;
+      border-radius: unset;
+      border: unset;
+      transform: unset;
+    }
+  }
+
+  .sliderContainer {
+    position: absolute;
+    top: calc(100vh - 240px);
+  }
+
+  .slider {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .slider p {
+    position: relative;
+    margin: 0px;
+    color: white;
+    font-size: 180px;
+    font-weight: 400;
+    padding-right: 50px;
+  }
+
+  .slider p:nth-of-type(2) {
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+
+  .description {
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    @media only screen and (max-width: 1023px) {
+      top: unset;
+      right: 10%;
+      left: unset;
+      bottom: 220px;
+    }
+    p {
+      margin: 0px;
+      margin-bottom: 10px;
+    }
+    svg {
+      transform: scale(2);
+      margin-bottom: 100px;
+      @media only screen and (max-width: 1023px) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
